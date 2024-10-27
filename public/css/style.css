@@ -1246,7 +1246,6 @@ textarea:focus {
   z-index: 60;
   width: 100%;
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 550px) {
   .kotalog_card {
@@ -1510,7 +1509,6 @@ textarea:focus {
 .filterkotalog_card {
   width: 800px;
   display: flex;  
-  background: #000617;
   transition: 0.3s; 
 }
 .filterkotalog_card_img {
