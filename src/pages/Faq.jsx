@@ -110,7 +110,9 @@ export default function Faq ({ api }) {
           </div>
         </div>
       </section>
-      <Form api={api} />
+      <div style={{ paddingBottom: '50px' }} className='centered'>
+        <Form api={api} />
+      </div>
     </main>
   )
 }
