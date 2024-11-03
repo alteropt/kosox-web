@@ -18,7 +18,7 @@ const FormSection = ({ api, className, ...props }) => {
             </div>
             <div className='form_contacts'>
               <div className='contact_page_about_phone'>
-                <img src='./img/phone.svg' alt='' />
+                <img src='/img/phone.svg' alt='' />
                 <div className='contact_page_about_phone_text'>
                   <a href='tel:+88124555155'>
                     <h3>+8 (812) 455-51-55</h3>
@@ -26,7 +26,7 @@ const FormSection = ({ api, className, ...props }) => {
                 </div>
               </div>
               <div className='contact_page_about_phone'>
-                <img src='./img/location.svg' alt='' />
+                <img src='/img/location.svg' alt='' />
                 <div className='contact_page_about_location_text'>
                   <a href='#0'>
                     <h3>
@@ -36,7 +36,7 @@ const FormSection = ({ api, className, ...props }) => {
                 </div>
               </div>
               <div className='contact_page_about_phone'>
-                <img src='./img/mail.svg' alt='' />
+                <img src='/img/mail.svg' alt='' />
                 <div className='contact_page_about_mail_text'>
                   <a href='mailto:zakaz@kosox.ru'>
                     <h3>zakaz@kosox.ru</h3>
