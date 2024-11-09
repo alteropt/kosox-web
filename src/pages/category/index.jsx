@@ -3,6 +3,9 @@ import Card from './Card'
 import { Link, useSearch } from 'wouter'
 import PageButtons from '../../components/PageButtons'
 import { navigate } from 'wouter/use-browser-location'
+import Banner from '../../components/Sections/Banner/Banner'
+import Attention from '../../components/UI/Attention/Attention'
+import Button from '../../components/UI/Button/Button'
 
 const Filter = ({ name, variants, onChange }) => {
   const key = Math.round(Math.random() * 1e10)
@@ -12,7 +15,7 @@ const Filter = ({ name, variants, onChange }) => {
     <div style={{ flexDirection: 'column' }} className='accordion-item '>
       <h2 className='accordion-header' id={header}>
         <button
-          className='btn btn-secondary dropdown-toggle collapsed'
+          className='btn btn-secondary dropdown-toggle collapsed filter-btn'
           type='button'
           data-bs-toggle='collapse'
           data-bs-target={`#${body}`}
@@ -121,20 +124,14 @@ export default function Category ({ api, params: { id } }) {
 
   return (
     <main>
-      <div
-        style={{
-          backgroundImage:
-            'url("/img/6ba632040d142d29a5ebe2411f406f96 — копия.jpeg")'
-        }}
-        className='header_main'
+      <Banner breadcrumbs={[
+        { title: 'Главная', url: '/' },
+        { title: 'Каталог', url: '/catalog' },
+        { title: categoryName }
+      ]}
       >
-        <div className='header_main_bg' />
-        <div className='header_main_flex'>
-          <h1>Каталог</h1>
-          <h1>/</h1>
-          <h1>{categoryName}</h1>
-        </div>
-      </div>
+        Каталог <Attention>товаров</Attention>
+      </Banner>
       <div className='filterkotalog'>
         <div className='filterkotalog_flex'>
           {
@@ -144,7 +141,7 @@ export default function Category ({ api, params: { id } }) {
                   <h2>Фильтр</h2>
                 </div>
                 <div
-                  className='accordion filterkotalog_filter_title'
+                  className='accordion filterkotalog_filter_title filterkotalog_filter_name'
                   id='accordionPanelsStayOpenExample'
                 >
                   {parameters.map(([name, variants]) => (
@@ -164,8 +161,7 @@ export default function Category ({ api, params: { id } }) {
                   ))}
                 </div>
                 <div className='filterkotalog_filter_btn'>
-                  <button onClick={() => setShowProducts(true)}>Закрыть</button>
-                  <button onClick={() => setShowProducts(true)}>Применить</button>
+                  <Button onClick={() => setShowProducts(true)}>Применить</Button>
                 </div>
               </div>
           }

@@ -27,17 +27,17 @@ export default function Catalog ({ api, params: { id } }) {
     })()
   }, [api, id])
   const breadcrumbs = [
-    {title: 'Главная', url: '/'},
-    {title: 'Каталог', url: '/catalog'},
+    { title: 'Главная', url: '/' },
+    { title: 'Каталог', url: '/catalog' }
   ]
-  id && breadcrumbs.push({title: categoryName})
+  id && breadcrumbs.push({ title: categoryName })
   return (
     <main>
       <Banner breadcrumbs={breadcrumbs}>
         Каталог <Attention>товаров</Attention>
       </Banner>
-      <Cards api={api} category={id} style={{paddingBottom: 70}}/>
-      <FormSection api={api} style={{ borderBottom: '1px solid #ff5f31' }}/>
+      <Cards api={api} category={id} style={{ paddingBottom: 70 }} />
+      <FormSection api={api} style={{ borderBottom: '1px solid #ff5f31' }} />
     </main>
   )
 }

@@ -620,3 +620,125 @@
   margin-bottom: 70px;
   padding: 0;
 }
+
+.filterkotalog_filter {
+  width: 370px;
+  background: #858585;
+  padding: 35px 52px;
+}
+
+.filterkotalog_filter_title {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.filterkotalog_filter_title h2 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.btn.filter-btn {
+  background: transparent;
+}
+
+.btn.filter-btn:hover {
+  background: transparent;
+}
+
+.filterkotalog_filter_name h2 {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.accordion {
+  gap: 15px;
+}
+
+.filterkotalog_filter_btn {
+  display: block;
+  margin-top: 50px; 
+}
+
+.filterkotalog_filter_btn button {
+  padding: 10px 50px;
+}
+
+.filterkotalog_cards {
+  padding-top: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.filterkotalog_cards >a {
+  flex-basis: 30%;
+  display: block; 
+}
+
+@media(max-width: 1024px) {
+  .filterkotalog_cards >a {
+    flex-basis: 40%;
+  }
+}
+
+@media(max-width: 575px) {
+  .filterkotalog_cards >a {
+    flex-basis: 75%;
+  }
+}
+
+.filterkotalog_card {
+  width: 100%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.filterkotalog_card_title {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.filterkotalog_card:hover .filterkotalog_card_title {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.filterkotalog_card_img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+} 
+
+.filterkotalog_card_title h2 {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.filterkotalog_card_title img {
+  align-self: flex-end;
+  margin: 0;
+}
+
+.filterkotalog_card_title {
+  padding: 0 15px 15px 0;
+}
+
+.filter-btn.btn-secondary::after {
+  padding-left: 30px;
+}
+
+.activa_nav {
+  background: #FF5F31;
+}
+
+.filterkotalog_button_fiter button {
+  background: #FF5F31;
+  width: fit-content;
+  padding-left: 80px;
+  padding-right: 80px;
+}
